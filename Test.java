@@ -1,4 +1,10 @@
-public class Test {
+public class Test 
+{    public static void main(String[] args) {
+        for (int i = 1; i <= 7; i++) {
+            System.out.println(checkNumber(i));
+        }
+    }
+}
 
     public static String checkNumber(int i) {
         if (i == 3) {
@@ -9,10 +15,5 @@ public class Test {
             return String.valueOf(i); 
         }
     }
-
-    public static void main(String[] args) {
-        for (int i = 1; i <= 7; i++) {
-            System.out.println(checkNumber(i));
-        }
-    }
 }
+   
