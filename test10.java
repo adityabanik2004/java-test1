@@ -30,7 +30,7 @@ class test10 {
     }
 
     static boolean Odd(int num) {
-         if(num%2!=0){            //Method for checking odd
+         if(num%2!=0){           
 			 
 		 }
 		 return true;
