@@ -1,46 +1,45 @@
-import java.util.Scanner;
+class test6 {
+    public static void main(String[] args) {          //Main method
+        if (args.length < 2) {
+            System.out.println("Please provide both username and password.");
+            return;
+        }
+        String username = args[0];
+        String password = args[1];
+        UserLogin(username, password);
+    }
 
-public class test6
-{
-
-    public static boolean login(String username, String
-	password) {
+    static void UserLogin(String username, String password) {
         switch (username) {
-            case "Ankan":
-                switch (password) {
+            case "ankan":
+                switch (password) {                     //Switch case logic for login
                     case "Madhu":
-                        return true;
+                        System.out.println("Login Successful!, welcome Ankan");
+                        break;
+                    case "trisha":
+                        System.out.println("Login Successful!, welcome Ankan");
+                        break;
                     default:
+                        System.out.println("Incorrect password");
                         break;
                 }
                 break;
-            case "Souparna":
+            case "souparno":
                 switch (password) {
-                    case "Trisha":
-                        return true;
+                    case "Madhu":
+                        System.out.println("Login Successful!, welcome Souparno");
+                        break;
+                    case "trisha":
+                        System.out.println("Login Successful!, welcome Souparno");
+                        break;
                     default:
+                        System.out.println("Incorrect password");
                         break;
                 }
                 break;
             default:
+                System.out.println("Incorrect Username");
                 break;
-        }
-        return false;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
-
-        if (login(username, password)) {
-            System.out.println("Login successful!");
-        } else {
-            System.out.println("Invalid username or password.");
         }
     }
 }
