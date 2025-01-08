@@ -1,32 +1,25 @@
-import java.util.Scanner;
-
-public class test2 {
-
+class test2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine().toLowerCase();
+        VowelsAndConsonants(args);               
+    }
 
-        int vowelCount = 0;
-        int consonantCount = 0;
-
-        for (int i = 0; i < name.length(); i++) 
-		{
-            char ch = name.charAt(i);
-            if (ch >= 'a' && ch <= 'z') 
-			{ 
-                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') 
-				{
-                    vowelCount++;
-                } 
-				else 
-				{
-                    consonantCount++;
-                }
+     static void VowelsAndConsonants(String[] args) {
+        if (args.length == 0) {
+            return;
+        }                               
+        String name = args[0];
+        int vowel = 0;
+        int consonant = 0;
+        name = name.toLowerCase();
+        for (int i = 0; i < name.length(); i++) {
+            char c = name.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                vowel++;
+            } else {
+                consonant++;
             }
         }
-
-        System.out.println("Number of vowels: " + vowelCount);
-        System.out.println("Number of consonants: " + consonantCount);
+        System.out.println("Number of vowels are: " + vowel);
+        System.out.println("Number of consonants are: " + consonant);
     }
 }
